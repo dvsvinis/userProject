@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ɵɵresolveBody } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 
@@ -17,4 +17,12 @@ export class UserService {
     return this.http.get('/server/api/v1/users');
   }
 
+  getUser(id: number){
+    return this.http.get('/server/api/v1/users' + id);
+  }
+
+  createUser(user){
+    const body = JSON.stringify(user);
+    return this.http.post('/server/api/v1/users' + body, httpOptions);
+  }
 }
