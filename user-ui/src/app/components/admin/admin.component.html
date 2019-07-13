@@ -10,7 +10,7 @@
     </tr>
     <tr *ngFor="let user of users">
       <td>
-        {{user.firstName}}
+        <a [routerLink]="['admin/view', user.id]"> {{user.firstName}}</a>
       </td>
       <td>
         {{user.lastName}}
