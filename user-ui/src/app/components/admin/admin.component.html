@@ -1,0 +1,32 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>User First Name</th>
+      <th>User Last Name</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zipcode</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>
+        {{user.firstName}}
+      </td>
+      <td>
+        {{user.lastName}}
+      </td>
+      <td>
+        {{user.email}}
+      </td>
+      <td>
+        {{user.city}}
+      </td>
+      <td>
+        {{user.state}}
+      </td>
+      <td>
+        {{user.zipcode}}
+      </td>
+    </tr>
+  </table>
+</div>
